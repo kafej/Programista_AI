@@ -94,6 +94,9 @@ Remove-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run' 
     Write-Host "Installing AnythingLLM as Docker container"
     docker pull mintplexlabs/anythingllm
 
+    # Serve the model on port 11434
+    ollama serve
+
     $env:STORAGE_LOCATION="$HOME\Documents\anythingllm"; `
     If(!(Test-Path $env:STORAGE_LOCATION)) {New-Item $env:STORAGE_LOCATION -ItemType Directory}; `
     If(!(Test-Path "$env:STORAGE_LOCATION\.env")) {New-Item "$env:STORAGE_LOCATION\.env" -ItemType File}; `
