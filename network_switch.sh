@@ -8,7 +8,7 @@ then
 fi
 
 # This need to be yours DB info
-DB_HOST="192.168.50.72"
+DB_HOST="localhost"
 DB_USER="external"
 DB_PASSWORD="Qwerty123"
 DB_NAME="vault"
